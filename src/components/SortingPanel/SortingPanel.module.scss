@@ -1,0 +1,26 @@
+.sortingPanel {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #141414;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+
+  input, select {
+    height: 50px;
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #201d1d;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+}
+
+
+

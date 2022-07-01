@@ -1,0 +1,77 @@
+.noteContainer {
+  color: white;
+  background-color: #141414;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 20px 10px 10px;
+  margin: 20px;
+  padding: 0;
+}
+
+.note__header {
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  background-color: #306f2a;
+}
+
+.note__text {
+  padding: 10px;
+}
+
+.note__category {
+  width: 220px;
+  padding: 10px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.note__deleteBtn {
+  width: 80px;
+  height: 30px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  background: #c32828;
+  border-radius: 0 10px 0 10px;
+}
+
+.noteEditor {
+  padding: 10px;
+  .noteEditor__header {
+    padding: 5px;
+    input {
+      width: 100%;
+      background-color: #141414;
+      border: none;
+      color: white;
+    }
+  }
+  .noteEditor__body{
+    textarea{
+      padding: 5px;
+      background: #141414;
+      color: white;
+      width: 280px;
+      border-radius: 5px;
+      resize: none;
+      border: none;
+    }
+    button {
+      background-color: #306f2a;
+      color: white;
+      padding: 5px;
+      border-radius: 10px;
+      border: none;
+    }
+  }
+}
+
+
+
+.note {
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+}
