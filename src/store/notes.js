@@ -2,7 +2,7 @@ import {makeAutoObservable} from "mobx";
 
 class Notes {
     notes = [
-        {id: 1, text: 'Купить хлеб', category: 'Без категории', isEditing: false},
+        {id: 1, text: 'Купить хлеб', category: '', isEditing: false},
     ]
 
     searchQuery = '';
@@ -16,7 +16,7 @@ class Notes {
     get categories() {
         const categoriesList = []
         for (const note of this.notes) {
-            const category = note.category ? note.category : 'Без категории'
+            const category = note.category !== '' ? note.category : 'Без категории'
             if (!categoriesList.includes(category) ) {
                 categoriesList.push(category);
             }
@@ -26,7 +26,10 @@ class Notes {
 
     get sortedAndSearchedNotes() {
         return this.notes
-            .filter(note => note.category === this.selectedCategory || this.selectedCategory === 'all')
+            .filter(note => {
+                const category = note.category !== '' ? note.category : 'Без категории';
+                return category === this.selectedCategory || this.selectedCategory === 'all';
+            })
             .filter(note => note.text.toLowerCase().includes(this.searchQuery.toLowerCase()));
     }
 
